@@ -1,0 +1,1852 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DhiWise web app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <img
+      alt="Logo"
+      src="https://appproject.dhiwise.com/dhiwise-logo.png?c=&v="
+      style="width: 0px; height: 0px; display: none"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer></script>
+    <script>
+      function handleSlider() {
+        const slider = document.querySelector("#slider");
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 3;
+        const slidesRequired = 6;
+        for (let i = 0; slides.length <= slidesToShow && i <= slidesRequired - 1; i++) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 3,
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 3 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          handleSlider();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      function handleSlider1() {
+        const slider = document.querySelector("#slider1");
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider1 > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider1 > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 1;
+        const slidesRequired = 2;
+        for (let i = 0; slides.length <= slidesToShow && i <= slidesRequired - 1; i++) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider1", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 1,
+          navigation: {
+            prevEl: "#slider1-control-prev",
+            nextEl: "#slider1-control-next",
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 1 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider1
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          handleSlider1();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      function handleSlider2() {
+        const slider = document.querySelector("#slider2");
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider2 > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider2 > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 1;
+        const slidesRequired = 2;
+        for (let i = 0; slides.length <= slidesToShow && i <= slidesRequired - 1; i++) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider2", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 1,
+          navigation: {
+            prevEl: "#slider2-control-prev",
+            nextEl: "#slider2-control-next",
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 1 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider2
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          handleSlider2();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      function handleSlider3() {
+        const slider = document.querySelector("#slider3");
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider3 > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider3 > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 4;
+        const slidesRequired = 8;
+        for (let i = 0; slides.length <= slidesToShow && i <= slidesRequired - 1; i++) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider3", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 4,
+          navigation: {
+            prevEl: "#slider3-control-prev",
+            nextEl: "#slider3-control-next",
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 4 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider3
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          handleSlider3();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      /**
+       * Handles the tab change functionality in a tablist
+       */
+      function handleTabs(/** @type {HTMLElement} */ target) {
+        const tabs = /** @type {HTMLElement[]} */ (target.querySelectorAll('[role="tab"]'));
+        const tabPanels = /** @type {HTMLElement[]} */ (target.querySelectorAll('[role="tabpanel"]'));
+        const activeClassList = target.dataset.activeClass.split(" ");
+
+        function changeTab(/** @type {HTMLElement}*/ target) {
+          target.focus();
+          const controls = /** @type {string} */ (target.getAttribute("aria-controls"));
+
+          for (const tab of tabs) {
+            const isActiveTab = tab.id === target.id;
+            const tabIndex = isActiveTab ? "0" : "-1";
+            const ariaSelected = isActiveTab ? "true" : "false";
+
+            tab.setAttribute("tabindex", tabIndex);
+            tab.setAttribute("aria-selected", ariaSelected);
+            isActiveTab ? tab.classList.add(...activeClassList) : tab.classList.remove(...activeClassList);
+          }
+
+          for (const panel of tabPanels) {
+            const shouldHidePanel = panel.id !== controls;
+            panel.hidden = shouldHidePanel;
+            panel.style.display = shouldHidePanel ? "none" : "";
+          }
+        }
+
+        function handleClickEvent(/** @type {MouseEvent} */ event) {
+          changeTab(event.target);
+        }
+
+        function handleKeyboardEvent(/** @type {KeyboardEvent} */ event) {
+          const key = event.key;
+          const target = event.target;
+          const index = [...tabs].findIndex((tab) => tab.id === target.id);
+
+          switch (key) {
+            case "ArrowLeft": {
+              const prevTab = tabs[index - 1];
+              if (prevTab) changeTab(prevTab);
+              break;
+            }
+
+            case "ArrowRight": {
+              const nextTab = tabs[index + 1];
+              if (nextTab) changeTab(nextTab);
+              break;
+            }
+
+            case "Home": {
+              const firstTab = tabs[0];
+              if (firstTab) changeTab(firstTab);
+              break;
+            }
+
+            case "End": {
+              const lastTab = tabs[tabs.length - 1];
+              if (lastTab) changeTab(lastTab);
+              break;
+            }
+          }
+        }
+
+        for (const tab of tabs) {
+          tab.style.cursor = "pointer";
+          tab.addEventListener("click", handleClickEvent);
+          tab.addEventListener("keydown", handleKeyboardEvent);
+        }
+      }
+      /**
+       * Hydrate tablist(s)
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabLists = /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll('[role="tablist"]'));
+        for (const tabList of tabLists) handleTabs(tabList);
+      });
+      function handleSlider4() {
+        const slider = document.querySelector("#slider4");
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider4 > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider4 > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 1;
+        const slidesRequired = 2;
+        for (let i = 0; slides.length <= slidesToShow && i <= slidesRequired - 1; i++) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider4", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 1,
+          pagination: {
+            el: "#slider4-pagination",
+            clickable: true,
+            bulletElement: "div",
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 1 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider4
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          handleSlider4();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="w-full">
+      <div class="flex flex-col items-center gap-24 md:gap-[72px] sm:gap-12">
+        <div class="flex flex-col items-center gap-8 self-stretch">
+          <header class="relative self-stretch">
+            <div class="flex justify-center py-4">
+              <div class="container-xs flex items-center justify-center md:p-5 sm:flex-col">
+                <div class="flex items-center gap-2 px-[371px] md:px-5 sm:flex-col">
+                  <a href="#">
+                    <img src="public/images/img_fi_837891.svg" alt="Fi837891" class="h-[24px] w-[24px] sm:w-full" />
+                  </a>
+                  <p class="text ui flex self-end !font-satoshi text-sm font-medium !text-colors36 sm:self-auto">
+                    <span class="font-rubik font-normal text-colors202">
+                      Sign up and get 10% off to your first order.&nbsp;</span
+                    >
+                    <a href="#" class="font-rubik font-normal text-colors203 underline"> Sign Up Now</a>
+                  </p>
+                </div>
+                <a href="#">
+                  <img src="public/images/img_close_circle.svg" alt="Image" class="h-[20px] w-[20px] sm:w-full" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-center border-b border-solid py-3">
+                <div class="container-xs flex items-center justify-between gap-5 md:flex-col md:p-5">
+                  <img
+                    src="public/images/img_header_logo.png"
+                    alt="Headerlogo"
+                    class="h-[19px] w-[129px] object-contain"
+                  />
+                  <div class="flex w-[35%] justify-center md:w-full">
+                    <ul class="flex items-center gap-11 sm:flex-col">
+                      <li>
+                        <a href="#">
+                          <p class="text ui text-sm font-medium !text-colors99">Home</p>
+                        </a>
+                      </li>
+                      <li class="group cursor-pointer">
+                        <div class="flex cursor-pointer pt-px">
+                          <p
+                            class="text ui cursor-pointer text-sm font-normal !text-colors163 hover:font-medium hover:!text-colors162"
+                          >
+                            Shop
+                          </p>
+                          <img src="public/images/img_arrow_down.svg" alt="Arrowdown" class="h-[16px] w-[16px]" />
+                        </div>
+                        <div class="absolute top-auto z-[99] hidden min-w-[200px] pt-3 group-hover:block">
+                          <div class="w-full rounded-lg bg-white-A700_01 p-5 shadow-xs">
+                            <div class="flex gap-[30px]">
+                              <div class="flex flex-col items-start gap-4 sm:gap-4">
+                                <p class="text ui !font-opensans text-lg font-bold !text-black-A700_01 sm:text-[15px]">
+                                  Title 1
+                                </p>
+                                <div class="flex flex-col items-start gap-3 sm:gap-3">
+                                  <a href="#" class="sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 1</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 2</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 3</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 4</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 5</p>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="flex flex-col items-start gap-4 sm:gap-4">
+                                <p class="text ui !font-opensans text-lg font-bold !text-black-A700_01 sm:text-[15px]">
+                                  Title 2
+                                </p>
+                                <div class="flex flex-col items-start gap-3 sm:gap-3">
+                                  <a href="#" class="sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 1</p>
+                                  </a>
+                                  <p
+                                    class="text ui self-center !font-opensans text-base font-normal !text-black-600 sm:text-[13px]"
+                                  >
+                                    Menu 2
+                                  </p>
+                                  <p
+                                    class="text ui self-center !font-opensans text-base font-normal !text-black-600 sm:text-[13px]"
+                                  >
+                                    Menu 3
+                                  </p>
+                                  <p
+                                    class="text ui self-center !font-opensans text-base font-normal !text-black-600 sm:text-[13px]"
+                                  >
+                                    Menu 4
+                                  </p>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 5</p>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="flex flex-col items-start gap-4 sm:gap-4">
+                                <p class="text ui !font-opensans text-lg font-bold !text-black-A700_01 sm:text-[15px]">
+                                  Title 3
+                                </p>
+                                <div class="flex flex-col items-start gap-3 sm:gap-3">
+                                  <a href="#" class="sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 1</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 2</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 3</p>
+                                  </a>
+                                  <a href="#" class="self-center sm:text-[13px]">
+                                    <p class="text ui !font-opensans text-base font-normal !text-black-600">Menu 4</p>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer">
+                          <p
+                            class="text ui text-sm font-normal !text-colors101 hover:font-medium hover:!text-colors100"
+                          >
+                            Offers
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer">
+                          <p
+                            class="text ui text-sm font-normal !text-colors103 hover:font-medium hover:!text-colors102"
+                          >
+                            Contact us
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer">
+                          <p
+                            class="text ui text-sm font-normal !text-colors105 hover:font-medium hover:!text-colors104"
+                          >
+                            Blog
+                          </p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="flex w-[21%] items-center justify-center gap-5 md:w-full">
+                    <label
+                      class="flex h-[36px] flex-grow items-center justify-center gap-1 rounded-[18px] px-2.5 text-xs text-colors72"
+                    >
+                      <img
+                        src="public/images/img_searchnormal.svg"
+                        alt="Search-normal"
+                        class="h-[20px] w-[20px] cursor-pointer"
+                      />
+                      <input name="search" placeholder="Search for products" type="text" />
+                    </label>
+                    <a href="#">
+                      <img src="public/images/img_shopping_cart.svg" alt="Shoppingcart" class="h-[20px] w-[20px]" />
+                    </a>
+                    <a href="#">
+                      <img src="public/images/img_frame.svg" alt="Image" class="h-[20px] w-[20px]" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="container-xs flex items-center gap-6 md:flex-col md:p-5">
+            <div class="flex flex-1 flex-col gap-[47px] md:self-stretch">
+              <div class="flex w-[91%] flex-col items-start gap-[5px] md:w-full">
+                <p class="text ui text-lg font-normal !text-colors23">
+                  Discover quality, style, and comfort for every room
+                </p>
+                <p class="text ui w-full text-[64px] font-medium leading-[76px] !text-colors24 md:text-5xl">
+                  Enhance your space with timeless furniture
+                </p>
+              </div>
+              <div class="flex w-[67%] gap-4 md:w-full">
+                <button
+                  class="flex h-[48px] min-w-[200px] flex-row items-center justify-center rounded-[24px] px-[35px] text-center text-sm font-semibold text-colors25 sm:px-5"
+                >
+                  Buy now
+                </button>
+                <button
+                  class="flex h-[48px] min-w-[200px] flex-row items-center justify-center rounded-[24px] border border-solid px-[34px] text-center font-plusjakartasans text-sm font-semibold text-colors26 sm:px-5"
+                >
+                  View more
+                </button>
+              </div>
+              <div class="flex gap-6 sm:flex-col">
+                <div class="flex w-[26%] flex-col items-start gap-1 sm:w-full">
+                  <p class="text ui text-2xl font-normal !text-colors37 md:text-[22px]">200+</p>
+                  <p class="text ui text-base font-normal !text-colors38">International Brands</p>
+                </div>
+                <div class="h-full w-px sm:h-px sm:w-full"></div>
+                <div class="flex w-[28%] flex-col items-start gap-[5px] sm:w-full">
+                  <p class="text ui text-2xl font-normal !text-colors39 md:text-[22px]">2,000+</p>
+                  <p class="text ui text-base font-normal !text-colors40">High-Quality Products</p>
+                </div>
+                <div class="h-full w-px sm:h-px sm:w-full"></div>
+                <div class="flex w-[22%] flex-col items-start gap-[5px] sm:w-full">
+                  <p class="text ui text-2xl font-normal !text-colors41 md:text-[22px]">30,000+</p>
+                  <p class="text ui text-base font-normal !text-colors42">Happy Customers</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-[45%] flex-col gap-5 md:w-full">
+              <div>
+                <div>
+                  <img
+                    src="public/images/img_rectangle_4.png"
+                    alt="Image"
+                    class="h-[296px] w-full rounded-[16px] object-cover md:h-auto"
+                  />
+                  <div class="relative mt-[-46px] flex items-center justify-between gap-5">
+                    <div class="mb-3 flex items-center justify-center self-end"></div>
+                    <button
+                      class="flex h-[46px] min-w-[102px] flex-row items-center justify-center gap-2 rounded-br-[16px] rounded-tl-[16px] px-[15px] text-center text-xs font-medium text-colors73"
+                    >
+                      <span> Buy now</span>
+                      <img src="public/images/img_send.svg" alt="Send" class="h-[12px] w-[12px]" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-5 sm:flex-col">
+                <div class="relative h-[294px] w-full md:h-auto sm:w-full">
+                  <div id="slider4" class="swiper flex w-full max-w-full">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide flex flex-col items-center">
+                        <img
+                          src="public/images/img_rectangle_5.png"
+                          alt="Image"
+                          class="h-[294px] w-full rounded-[16px] object-cover md:h-auto"
+                        />
+                        <div class="relative mt-[-46px] flex self-end">
+                          <button
+                            class="flex h-[46px] min-w-[102px] flex-row items-center justify-center gap-2 rounded-br-[16px] rounded-tl-[16px] px-[15px] text-center text-xs font-medium text-colors164"
+                          >
+                            <span> Buy now</span>
+                            <img src="public/images/img_send.svg" alt="Send" class="h-[12px] w-[12px]" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="slider4-pagination"
+                    class="absolute bottom-[11.00px] left-[11.00px] right-auto top-auto z-[99] m-auto flex items-center justify-center"
+                  ></div>
+                </div>
+                <div class="w-full sm:w-full">
+                  <img
+                    src="public/images/img_rectangle_6.png"
+                    alt="Image"
+                    class="h-[294px] w-full rounded-[16px] object-cover md:h-auto"
+                  />
+                  <div class="relative mt-[-46px] flex items-center justify-between gap-5">
+                    <div class="mb-[11px] flex w-[22%] justify-center self-end rounded-[9px]">
+                      <div class="flex w-full items-center gap-1">
+                        <div class="h-[10px] w-[10px] rounded-[5px] border border-solid"></div>
+                        <div class="h-[6px] w-[6px] flex-1 rounded-[3px]"></div>
+                        <div class="h-[6px] w-[6px] flex-1 rounded-[3px]"></div>
+                        <div class="h-[6px] w-[6px] flex-1 rounded-[3px]"></div>
+                      </div>
+                    </div>
+                    <button
+                      class="flex h-[46px] min-w-[102px] flex-row items-center justify-center gap-2 rounded-br-[16px] rounded-tl-[16px] px-[15px] text-center text-xs font-medium text-colors74"
+                    >
+                      <span> Buy now</span>
+                      <img src="public/images/img_send.svg" alt="Send" class="h-[12px] w-[12px]" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="self-stretch">
+            <div class="flex gap-[31px] pl-[163px] pr-14 md:flex-col md:px-5">
+              <div class="flex w-[43%] gap-[51px] md:w-full md:flex-row sm:flex-col">
+                <div class="flex items-center gap-3">
+                  <img src="public/images/img_fi_2997062.svg" alt="High Quality" class="h-[40px] w-[40px]" />
+                  <div class="flex flex-col items-start gap-1.5">
+                    <p class="text ui !font-inter text-lg font-medium !text-colors75">High quality</p>
+                    <p class="text ui !font-inter text-base font-normal !text-colors76">crafted from top materials</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <img src="public/images/img_fi_4497604.svg" alt="High Quality" class="h-[40px] w-[40px]" />
+                  <div class="flex flex-col items-start gap-1.5">
+                    <p class="text ui !font-inter text-lg font-medium !text-colors77">Warranty Protection</p>
+                    <p class="text ui !font-inter text-base font-normal !text-colors78">Over 2 years</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-[24%] items-center justify-center gap-3 p-8 md:w-full sm:p-5">
+                <img src="public/images/img_fi_1949454.svg" alt="Fi1949454" class="h-[40px] w-[40px]" />
+                <div class="flex flex-col items-center gap-[5px]">
+                  <p class="text ui !font-inter text-lg font-medium !text-colors43">Free Shipping</p>
+                  <p class="text ui !font-inter text-base font-normal !text-colors44">Order over $150</p>
+                </div>
+              </div>
+              <div class="flex w-[24%] items-center justify-center gap-3 p-8 md:w-full sm:p-5">
+                <img src="public/images/img_xmlid_831.svg" alt="Xmlid831" class="h-[40px] w-[40px]" />
+                <div class="flex flex-col items-start gap-1.5">
+                  <p class="text ui !font-inter text-lg font-medium !text-colors45">24 / 7 Support</p>
+                  <p class="text ui !font-inter text-base font-normal !text-colors46">Dedicated support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-[95px] self-stretch md:gap-[71px] sm:gap-[47px]">
+          <div class="container-xs flex md:p-5">
+            <div
+              id="tabList"
+              role="tablist"
+              aria-label="rowshopby"
+              class="flex w-full flex-col items-center gap-8"
+              data-active-class="font-medium border-b border-style-[normal]"
+            >
+              <div class="flex w-[22%] flex-col items-center gap-0.5 md:w-full">
+                <p class="text ui text-5xl font-medium !text-colors27 md:text-[44px] sm:text-[38px]">Categories</p>
+                <p class="text ui text-base font-normal !text-colors28">Crafted with love specially for you</p>
+              </div>
+              <div class="flex justify-between gap-5 self-stretch sm:flex-col">
+                <div class="flex flex-wrap gap-3 pt-1.5">
+                  <span
+                    class="border-style-[normal] border-b p-[7px] text-base font-medium font-normal text-colors47"
+                    id="tab01"
+                    role="tab"
+                    aria-controls="tabpanel01"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    Shop by products</span
+                  >
+                  <span
+                    class="p-[7px] text-base font-normal text-colors48"
+                    id="tab11"
+                    role="tab"
+                    aria-controls="tabpanel11"
+                    aria-selected="false"
+                    tabindex="-1"
+                  >
+                    Shop by rooms</span
+                  >
+                </div>
+                <button
+                  class="flex h-[30px] min-w-[96px] flex-row items-center justify-center gap-2 rounded-[15px] border border-solid px-[15px] text-center text-xs font-medium text-colors29"
+                >
+                  <span> View all</span>
+                  <img src="public/images/img_send_12x12.svg" alt="Send" class="h-[12px] w-[12px]" />
+                </button>
+              </div>
+              <div id="tabpanel01" role="tabpanel" aria-labelledby="tab01" class="tabcontent self-stretch">
+                <div class="flex flex-col items-center gap-[29px]">
+                  <div class="self-stretch">
+                    <div id="slider3" class="swiper mx-3 flex w-full max-w-full gap-6 md:flex-col">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide px-3">
+                          <div class="flex flex-col items-center gap-3.5">
+                            <img
+                              src="public/images/img_rectangle_31.png"
+                              alt="Image"
+                              class="h-[270px] w-full rounded-[16px] object-cover md:h-auto"
+                            />
+                            <p class="text ui text-[28px] font-medium !text-colors165 md:text-[26px] sm:text-2xl">
+                              Sofa
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide px-3">
+                          <div class="flex flex-col items-center gap-[15px]">
+                            <img
+                              src="public/images/img_rectangle_31_270x270.png"
+                              alt="Image"
+                              class="h-[270px] w-full rounded-[16px] object-cover md:h-auto"
+                            />
+                            <p class="text ui text-[28px] font-medium !text-colors166 md:text-[26px] sm:text-2xl">
+                              Bed
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide px-3">
+                          <div class="flex flex-col items-center gap-[15px]">
+                            <img
+                              src="public/images/img_rectangle_31_1.png"
+                              alt="Image"
+                              class="h-[270px] w-full rounded-[16px] object-cover md:h-auto"
+                            />
+                            <p class="text ui text-[28px] font-medium !text-colors167 md:text-[26px] sm:text-2xl">
+                              Table
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide px-3">
+                          <div class="flex flex-col items-center gap-[17px]">
+                            <img
+                              src="public/images/img_rectangle_31_2.png"
+                              alt="Image"
+                              class="h-[270px] w-full rounded-[16px] object-cover md:h-auto"
+                            />
+                            <p class="text ui text-[28px] font-medium !text-colors168 md:text-[26px] sm:text-2xl">
+                              Night stand
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex w-[9%] gap-3 md:w-full">
+                    <button
+                      id="slider3-control-prev"
+                      class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] border border-solid px-[15px]"
+                    ></button>
+                    <button
+                      id="slider3-control-next"
+                      class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] border border-solid px-[15px]"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="display: none"
+                id="tabpanel11"
+                role="tabpanel"
+                aria-labelledby="tab11"
+                class="tabcontent self-stretch"
+              >
+                <span style="min-height: 399px"> Shop by rooms content</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[448px] self-stretch md:h-auto">
+            <div id="slider2" class="swiper flex w-full max-w-full">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide flex h-[448px] items-center bg-[url(../public/images/img_frame_125.png)] bg-cover bg-no-repeat pb-[116px] pt-[115px] md:h-auto md:py-5"
+                >
+                  <div class="container-xs flex pl-[130px] pr-14 md:p-5 md:px-5">
+                    <div class="flex w-[41%] flex-col items-center gap-10 md:w-full">
+                      <div class="flex flex-col items-center gap-[3px]">
+                        <p class="text ui text-[44px] font-light !text-colors106 md:text-[40px] sm:text-[34px]">
+                          Summer Collection
+                        </p>
+                        <p class="text ui text-6xl font-bold !text-colors107 md:text-[52px] sm:text-[46px]">
+                          FLAT 50% Off
+                        </p>
+                      </div>
+                      <button
+                        class="flex h-[48px] w-full flex-row items-center justify-center rounded-[24px] px-[35px] text-center font-plusjakartasans text-sm font-semibold text-colors79 sm:px-5"
+                      >
+                        Buy now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-xs absolute bottom-0 left-0 right-0 top-0 my-auto flex h-max justify-between gap-5 md:p-5"
+            >
+              <button
+                id="slider2-control-prev"
+                class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] px-3"
+              ></button>
+              <button
+                id="slider2-control-next"
+                class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] px-3"
+              ></button>
+            </div>
+          </div>
+          <div class="container-xs flex flex-col items-center gap-8 md:p-5">
+            <div class="flex w-[25%] flex-col items-center gap-[7px] md:w-full">
+              <p class="text ui text-5xl font-medium !text-colors13 md:text-[44px] sm:text-[38px]">New arrivals</p>
+              <p class="text ui text-base font-normal !text-colors14">Crafted with love specially for you</p>
+            </div>
+            <div class="flex items-center justify-between gap-5 self-stretch sm:flex-col">
+              <div class="flex w-[39%] justify-center gap-3 sm:w-full sm:flex-col">
+                <button
+                  class="flex h-[35px] w-full flex-1 flex-row items-center justify-center border-b border-solid px-[7px] text-center text-base font-medium text-colors30 sm:self-stretch"
+                >
+                  Chairs
+                </button>
+                <div class="flex px-[7px] pb-2 pt-[7px]">
+                  <p class="text ui text-base font-normal !text-colors49">Table</p>
+                </div>
+                <div class="flex w-[11%] justify-center px-[7px] pb-2 pt-[7px] sm:w-full">
+                  <p class="text ui text-base font-normal !text-colors50">Sofa</p>
+                </div>
+                <div class="flex px-2 pb-1.5 pt-[9px]">
+                  <p class="text ui text-base font-normal !text-colors51">Lamps</p>
+                </div>
+                <div class="flex w-[10%] justify-center px-2 pb-1.5 pt-[9px] sm:w-full">
+                  <p class="text ui text-base font-normal !text-colors52">Rug</p>
+                </div>
+                <div class="flex w-[12%] justify-center px-[7px] pb-2 pt-[7px] sm:w-full">
+                  <p class="text ui text-base font-normal !text-colors53">Desk</p>
+                </div>
+                <div class="flex w-[10%] justify-center px-[7px] pb-2 pt-[7px] sm:w-full">
+                  <p class="text ui text-base font-normal !text-colors54">Bed</p>
+                </div>
+              </div>
+              <button
+                class="flex h-[30px] min-w-[96px] flex-row items-center justify-center gap-2 rounded-[15px] border border-solid px-[15px] text-center text-xs font-medium text-colors15"
+              >
+                <span> View all</span>
+                <img src="public/images/img_send_12x12.svg" alt="Send" class="h-[12px] w-[12px]" />
+              </button>
+            </div>
+            <div class="grid grid-cols-4 justify-center gap-6 self-stretch md:grid-cols-2 sm:grid-cols-1">
+              <div class="mb-[377px] mr-[882px] flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14.png"
+                    alt="Comfy Craft"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors108">Comfy craft</p>
+                      <p class="text ui text-sm font-normal !text-colors109">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors110">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors111 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors80">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-[11px]">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_270x270.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[5px]">
+                      <p class="text ui text-base font-normal !text-colors112">Home haven</p>
+                      <p class="text ui text-sm font-normal !text-colors113">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors114">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors115 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors81">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_1.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors116">Cozy nook</p>
+                      <p class="text ui text-sm font-normal !text-colors117">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors118">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors119 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors82">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-[11px]">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_2.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[5px]">
+                      <p class="text ui text-base font-normal !text-colors120">Urban charm</p>
+                      <p class="text ui text-sm font-normal !text-colors121">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors122">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors123 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors83">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-[11px]">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_3.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[5px]">
+                      <p class="text ui text-base font-normal !text-colors124">Rustic retreat</p>
+                      <p class="text ui text-sm font-normal !text-colors125">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors126">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors127 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors84">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_4.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors128">Sleek style</p>
+                      <p class="text ui text-sm font-normal !text-colors129">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors130">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors131 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors85">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_5.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors132">Tranquil vibes</p>
+                      <p class="text ui text-sm font-normal !text-colors133">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors134">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors135 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors86">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_6.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-center justify-center pb-[218px] pl-[218px] md:pb-5 md:pl-5">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors136">Harmony home</p>
+                      <p class="text ui text-sm font-normal !text-colors137">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors138">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors139 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors87">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="self-stretch">
+            <div class="flex flex-col items-center justify-center gap-4 py-24 md:py-5">
+              <div class="swiper container-xs flex md:p-5" id="slider1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide flex items-center gap-10 md:flex-col">
+                    <div class="mb-[49px] flex w-[35%] flex-col gap-16 self-end md:w-full md:self-auto sm:gap-8">
+                      <div class="flex flex-col gap-2">
+                        <p
+                          class="text ui text-5xl font-medium leading-[64px] !text-colors140 md:text-[44px] sm:text-[38px]"
+                        >
+                          Inspiration to kickstart your journey.
+                        </p>
+                        <p class="text ui text-base font-normal leading-6 !text-colors141">
+                          Our designer has crafted numerous stunning room prototypes to spark your imagination.
+                        </p>
+                      </div>
+                      <button
+                        class="flex h-[48px] w-full flex-row items-center justify-center rounded-[24px] px-[35px] text-center text-sm font-semibold text-colors88 sm:px-5"
+                      >
+                        Explore more
+                      </button>
+                    </div>
+                    <div class="flex flex-1 items-start gap-6 md:flex-col md:self-stretch">
+                      <div class="w-[50%] md:w-full">
+                        <img
+                          src="public/images/img_rectangle_24.png"
+                          alt="Image"
+                          class="h-[494px] w-full rounded-[20px] object-cover md:h-auto"
+                        />
+                        <div class="relative mt-[-64px] px-4">
+                          <div class="flex flex-col items-start gap-2.5 rounded-[16px] px-4 pb-[13px] pt-4">
+                            <div class="flex items-center">
+                              <p class="text ui self-start !font-inter text-base font-normal !text-colors170">01</p>
+                              <div class="ml-[9px] h-[17px] w-px self-start"></div>
+                              <p class="text ui ml-[7px] self-end !font-inter text-base font-normal !text-colors171">
+                                Study Room
+                              </p>
+                            </div>
+                            <p class="text ui text-2xl font-normal !text-colors169 md:text-[22px]">Stay Focused</p>
+                          </div>
+                        </div>
+                      </div>
+                      <img
+                        src="public/images/img_rectangle_25.png"
+                        alt="Image"
+                        class="h-[494px] w-[50%] rounded-[20px] object-cover md:w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-xs flex flex-col items-center pl-[736px] pr-[308px] md:p-5 md:px-5">
+                <div class="flex gap-3 self-start">
+                  <button
+                    id="slider1-control-prev"
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] px-[15px]"
+                  ></button>
+                  <button
+                    id="slider1-control-next"
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] px-[15px]"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-xs flex flex-col items-center gap-8 md:p-5">
+            <div class="flex w-[28%] flex-col items-center gap-[3px] md:w-full">
+              <p class="text ui text-5xl font-medium !text-colors16 md:text-[44px] sm:text-[38px]">Recently view</p>
+              <p class="text ui text-base font-normal !text-colors17">Things you are keeping eye on</p>
+            </div>
+            <div class="flex gap-6 self-stretch md:flex-col">
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_7.png"
+                    alt="Comfy Craft"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-start gap-48 md:gap-36 sm:gap-24">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center self-end rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                      <button
+                        class="flex h-[26px] min-w-[55px] flex-row items-center justify-center gap-0.5 rounded-[13px] px-1.5 text-center text-sm text-colors142"
+                      >
+                        <img src="public/images/img_frame_16x16.svg" alt="Frame" class="h-[16px] w-[16px]" />
+                        <span> 4.5</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors143">Comfy craft</p>
+                      <p class="text ui text-sm font-normal !text-colors144">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors145">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors146 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors89">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-[11px]">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_8.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-start gap-48 md:gap-36 sm:gap-24">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center self-end rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                      <button
+                        class="flex h-[26px] min-w-[55px] flex-row items-center justify-center gap-0.5 rounded-[13px] px-1.5 text-center text-sm text-colors147"
+                      >
+                        <img src="public/images/img_frame_16x16.svg" alt="Frame" class="h-[16px] w-[16px]" />
+                        <span> 4.5</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[5px]">
+                      <p class="text ui text-base font-normal !text-colors148">Home haven</p>
+                      <p class="text ui text-sm font-normal !text-colors149">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors150">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors151 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors90">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-3">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_9.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-start gap-48 md:gap-36 sm:gap-24">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center self-end rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                      <button
+                        class="flex h-[26px] min-w-[55px] flex-row items-center justify-center gap-0.5 rounded-[13px] px-1.5 text-center text-sm text-colors152"
+                      >
+                        <img src="public/images/img_frame_16x16.svg" alt="Frame" class="h-[16px] w-[16px]" />
+                        <span> 4.5</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-[11px] px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[3px]">
+                      <p class="text ui text-base font-normal !text-colors153">Cozy nook</p>
+                      <p class="text ui text-sm font-normal !text-colors154">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors155">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors156 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors91">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full flex-col gap-[11px]">
+                <div class="relative h-[270px] md:h-auto">
+                  <img
+                    src="public/images/img_rectangle_14_10.png"
+                    alt="Image"
+                    class="h-[270px] w-full rounded-[16px] object-cover"
+                  />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-max w-full flex-col items-center p-2"
+                  >
+                    <div class="flex flex-col items-start gap-48 md:gap-36 sm:gap-24">
+                      <button class="flex h-[36px] w-[36px] items-center justify-center self-end rounded-[18px] px-2">
+                        <img src="public/images/img_frame_48096809.svg" />
+                      </button>
+                      <button
+                        class="flex h-[26px] min-w-[55px] flex-row items-center justify-center gap-0.5 rounded-[13px] px-1.5 text-center text-sm text-colors157"
+                      >
+                        <img src="public/images/img_frame_16x16.svg" alt="Frame" class="h-[16px] w-[16px]" />
+                        <span> 4.5</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 px-3">
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[66%] flex-col items-start gap-[5px]">
+                      <p class="text ui text-base font-normal !text-colors158">Urban charm</p>
+                      <p class="text ui text-sm font-normal !text-colors159">Pure english wood with...</p>
+                    </div>
+                    <button
+                      class="flex h-[36px] w-[36px] items-center justify-center rounded-lg border border-solid px-2"
+                    >
+                      <img src="public/images/img_frame_94.svg" />
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="flex w-[35%] flex-wrap items-center justify-center gap-1">
+                      <p class="text ui text-base font-semibold !text-colors160">$ 500</p>
+                      <p class="text ui self-start text-sm font-normal !text-colors161 line-through">$800</p>
+                    </div>
+                    <p class="text ui self-start text-sm font-normal !text-colors92">30% OFF</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="self-stretch">
+            <div class="flex flex-col items-center justify-center gap-8 pb-24 pt-[94px] md:py-5">
+              <div class="container-xs flex flex-col items-center px-[434px] md:p-5 md:px-5">
+                <div class="flex flex-col items-center gap-2">
+                  <p class="text ui text-5xl font-medium !text-colors55 md:text-[44px] sm:text-[38px]">#Webfurni</p>
+                  <p class="text ui text-base font-normal !text-colors56">Tag us on social media to get discount</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-center gap-4 self-stretch">
+                <div class="flex justify-center self-stretch">
+                  <div class="container-xs flex justify-center px-[92px] md:flex-col md:p-5 md:px-5">
+                    <img
+                      src="public/images/img_rectangle.png"
+                      alt="Image"
+                      class="h-[168px] w-[27%] rounded-lg object-cover md:w-full"
+                    />
+                    <img
+                      src="public/images/img_circle.png"
+                      alt="Circleimage"
+                      class="ml-[52px] h-[168px] w-[168px] rounded-[50%] md:ml-0"
+                    />
+                    <img
+                      src="public/images/img_curve_left.png"
+                      alt="Curveleft"
+                      class="ml-[52px] h-[168px] w-[27%] rounded-bl-[84px] rounded-br-lg rounded-tl-[84px] rounded-tr-lg object-cover md:ml-0 md:w-full"
+                    />
+                    <img
+                      src="public/images/img_curve_right.png"
+                      alt="Curveright"
+                      class="ml-6 h-[168px] w-[27%] rounded-bl-lg rounded-br-[84px] rounded-tl-lg rounded-tr-[84px] object-cover md:ml-0 md:w-full"
+                    />
+                  </div>
+                </div>
+                <div class="flex justify-center self-stretch">
+                  <div class="container-xs flex justify-center px-[92px] md:flex-col md:p-5 md:px-5">
+                    <img
+                      src="public/images/img_rectangle_168x224.png"
+                      alt="Image"
+                      class="h-[168px] w-[27%] rounded-lg object-cover md:w-full"
+                    />
+                    <img
+                      src="public/images/img_curve_left_168x224.png"
+                      alt="Curveleft"
+                      class="ml-6 h-[168px] w-[27%] rounded-bl-[84px] rounded-br-lg rounded-tl-[84px] rounded-tr-lg object-cover md:ml-0 md:w-full"
+                    />
+                    <img
+                      src="public/images/img_circle_168x168.png"
+                      alt="Circleimage"
+                      class="ml-[52px] h-[168px] w-[168px] rounded-[50%] md:ml-0"
+                    />
+                    <img
+                      src="public/images/img_curve_right_168x224.png"
+                      alt="Curveright"
+                      class="ml-[52px] h-[168px] w-[27%] rounded-bl-lg rounded-br-[84px] rounded-tl-lg rounded-tr-[84px] object-cover md:ml-0 md:w-full"
+                    />
+                  </div>
+                </div>
+                <div class="container-xs px-[92px] md:p-5 md:px-5">
+                  <div class="flex gap-[52px] md:flex-col">
+                    <img
+                      src="public/images/img_curve_right_1.png"
+                      alt="Curveright"
+                      class="h-[168px] w-[23%] rounded-bl-lg rounded-br-[84px] rounded-tl-lg rounded-tr-[84px] object-cover md:w-full"
+                    />
+                    <img
+                      src="public/images/img_circle_1.png"
+                      alt="Circleimage"
+                      class="h-[168px] w-[17%] rounded-[50%]"
+                    />
+                    <img
+                      src="public/images/img_rectangle_1.png"
+                      alt="Image"
+                      class="h-[168px] w-[23%] rounded-lg object-cover md:w-full"
+                    />
+                    <img
+                      src="public/images/img_curve_left_1.png"
+                      alt="Curveleft"
+                      class="h-[168px] w-[23%] rounded-bl-[84px] rounded-br-lg rounded-tl-[84px] rounded-tr-lg object-cover md:w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-xs flex md:p-5">
+          <div class="flex w-full flex-col items-center gap-8">
+            <div class="flex w-[44%] flex-col items-center gap-0.5 pt-1 md:w-full">
+              <p class="text ui text-5xl font-medium !text-colors18 md:text-[44px] sm:text-[38px]">Our strength</p>
+              <p class="text ui text-base font-normal !text-colors19">
+                See what our satisfied customers have to say about their experience
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-8 self-stretch">
+              <div id="slider" class="swiper mx-3 flex max-w-full gap-6 self-stretch md:mx-0 md:flex-col">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide px-3">
+                    <div class="flex flex-col gap-6 border-2 border-solid p-6 sm:p-5">
+                      <div class="flex flex-col items-start gap-2">
+                        <div class="ratingbar ui flex gap-2.5">
+                          <input type="radio" id="ratingbar21" name="ratingbar2" value="1" class="peer sr-only" />
+                          <label
+                            for="ratingbar21"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors193 peer-checked:text-colors192"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar22" name="ratingbar2" value="2" class="peer sr-only" />
+                          <label
+                            for="ratingbar22"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors195 peer-checked:text-colors194"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar23" name="ratingbar2" value="3" class="peer sr-only" />
+                          <label
+                            for="ratingbar23"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors197 peer-checked:text-colors196"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar24" name="ratingbar2" value="4" class="peer sr-only" />
+                          <label
+                            for="ratingbar24"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors199 peer-checked:text-colors198"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar25" name="ratingbar2" value="5" class="peer sr-only" />
+                          <label
+                            for="ratingbar25"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors201 peer-checked:text-colors200"
+                          >
+                            ★</label
+                          >
+                        </div>
+                        <p class="text ui w-full !font-inter text-base font-normal leading-[150%] !text-colors93">
+                          Absolutely delighted with my recent furniture purchase! The sleek design and sturdy build
+                          perfectly complement my space.
+                        </p>
+                        <p class="text ui text-base font-normal !text-colors94">John oliver</p>
+                      </div>
+                      <div class="flex gap-6">
+                        <img
+                          src="public/images/img_rectangle_10.png"
+                          alt="Image"
+                          class="h-[264px] w-[50%] object-cover"
+                        />
+                        <div class="flex w-[50%] flex-col gap-6">
+                          <img src="public/images/img_rectangle_11.png" alt="Image" class="h-[120px] object-cover" />
+                          <img src="public/images/img_rectangle_12.png" alt="Image" class="h-[120px] object-cover" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide px-3">
+                    <div class="flex flex-col gap-6 border-2 border-solid p-6 sm:p-5">
+                      <div class="flex flex-col items-start gap-2">
+                        <div class="ratingbar ui flex gap-2.5">
+                          <input type="radio" id="ratingbar11" name="ratingbar1" value="1" class="peer sr-only" />
+                          <label
+                            for="ratingbar11"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors183 peer-checked:text-colors182"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar12" name="ratingbar1" value="2" class="peer sr-only" />
+                          <label
+                            for="ratingbar12"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors185 peer-checked:text-colors184"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar13" name="ratingbar1" value="3" class="peer sr-only" />
+                          <label
+                            for="ratingbar13"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors187 peer-checked:text-colors186"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar14" name="ratingbar1" value="4" class="peer sr-only" />
+                          <label
+                            for="ratingbar14"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors189 peer-checked:text-colors188"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar15" name="ratingbar1" value="5" class="peer sr-only" />
+                          <label
+                            for="ratingbar15"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors191 peer-checked:text-colors190"
+                          >
+                            ★</label
+                          >
+                        </div>
+                        <p class="text ui w-full !font-inter text-base font-normal leading-[150%] !text-colors95">
+                          Impressed with the furniture&#39;s craftsmanship and comfort. It&#39;s transformed my living
+                          room into a cozy haven. Highly recommend!
+                        </p>
+                        <p class="text ui text-base font-normal !text-colors96">Mark robber</p>
+                      </div>
+                      <div class="flex gap-6">
+                        <img
+                          src="public/images/img_rectangle_10_264x148.png"
+                          alt="Image"
+                          class="h-[264px] w-[50%] object-cover"
+                        />
+                        <div class="flex w-[50%] flex-col gap-6">
+                          <img
+                            src="public/images/img_rectangle_11_120x148.png"
+                            alt="Image"
+                            class="h-[120px] object-cover"
+                          />
+                          <img
+                            src="public/images/img_rectangle_12_120x148.png"
+                            alt="Image"
+                            class="h-[120px] object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide px-3">
+                    <div class="flex flex-col gap-6 border-2 border-solid p-6 sm:p-5">
+                      <div class="flex flex-col items-start gap-2">
+                        <div class="ratingbar ui flex gap-2.5">
+                          <input type="radio" id="ratingbar1" name="ratingbar" value="1" class="peer sr-only" />
+                          <label
+                            for="ratingbar1"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors173 peer-checked:text-colors172"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar2" name="ratingbar" value="2" class="peer sr-only" />
+                          <label
+                            for="ratingbar2"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors175 peer-checked:text-colors174"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar3" name="ratingbar" value="3" class="peer sr-only" />
+                          <label
+                            for="ratingbar3"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors177 peer-checked:text-colors176"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar4" name="ratingbar" value="4" class="peer sr-only" />
+                          <label
+                            for="ratingbar4"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors179 peer-checked:text-colors178"
+                          >
+                            ★</label
+                          >
+                          <input type="radio" id="ratingbar5" name="ratingbar" value="5" class="peer sr-only" />
+                          <label
+                            for="ratingbar5"
+                            title="text"
+                            class="cursor-pointer text-[32px] text-colors181 peer-checked:text-colors180"
+                          >
+                            ★</label
+                          >
+                        </div>
+                        <p class="text ui w-full !font-inter text-base font-normal leading-[150%] !text-colors97">
+                          Thrilled with my new furniture pieces! They&#39;re chic, functional, and fit seamlessly into
+                          my home decor. A fantastic addition to any space..
+                        </p>
+                        <p class="text ui text-base font-normal !text-colors98">Jeenn smith</p>
+                      </div>
+                      <div class="flex gap-6">
+                        <img
+                          src="public/images/img_rectangle_10_1.png"
+                          alt="Image"
+                          class="h-[264px] w-[50%] object-cover"
+                        />
+                        <div class="flex w-[50%] flex-col gap-6">
+                          <img src="public/images/img_rectangle_11_1.png" alt="Image" class="h-[120px] object-cover" />
+                          <img src="public/images/img_rectangle_12_1.png" alt="Image" class="h-[120px] object-cover" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-[9%] gap-3 md:w-full">
+                <button
+                  class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] border border-solid px-[15px]"
+                >
+                  <img src="public/images/img_frame_48096814.svg" />
+                </button>
+                <button
+                  class="flex h-[48px] w-[48px] items-center justify-center rounded-[24px] border border-solid px-[15px]"
+                >
+                  <img src="public/images/img_frame_48096813.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="flex flex-col items-center gap-5 self-stretch border-t border-solid pb-5 pt-10 sm:pt-5">
+          <div class="container-xs flex items-center justify-between gap-5 md:flex-col md:p-5">
+            <div class="flex w-[22%] flex-col gap-4 md:w-full">
+              <img src="public/images/img_image_20.png" alt="Imagetwenty" class="h-[19px] w-[52%] object-cover" />
+              <div class="flex flex-col items-start gap-[17px]">
+                <p class="text ui w-full text-base font-normal leading-6 !text-colors31">
+                  Worldwide furniture store since 2020. We sell over 1000+ branded products on our website
+                </p>
+                <div class="flex gap-2">
+                  <img src="public/images/img_pin_24px.svg" alt="Pin24px" class="h-[20px] w-[20px] self-start" />
+                  <p class="text ui self-end !font-inter text-base font-normal !text-colors57">
+                    Sawojajar Malang, Indonesia
+                  </p>
+                </div>
+                <div class="flex w-[63%] gap-2 md:w-full">
+                  <img src="public/images/img_phone_24px.svg" alt="Phone24px" class="h-[20px] w-[20px]" />
+                  <p class="text ui !font-inter text-base font-normal !text-colors58">+6289 456 3455</p>
+                </div>
+                <a href="www.urbancraft.com" target="_blank" rel="noreferrer">
+                  <p class="text ui text-base font-normal !text-colors32">www.urbancraft.com</p>
+                </a>
+              </div>
+            </div>
+            <div class="flex w-[41%] items-start justify-between gap-5 md:w-full sm:flex-col">
+              <div class="flex w-[36%] flex-col items-center gap-[18px] sm:w-full">
+                <p class="text ui text-lg font-semibold !text-colors33">Sitemap</p>
+                <ul class="flex flex-col items-center gap-5">
+                  <li>
+                    <a href="Product" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors59">Product</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Services" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors60">Services</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Article" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors61">Article</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors62">About Us</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex w-[40%] flex-col items-center gap-[18px] sm:w-full">
+                <p class="text ui text-lg font-semibold !text-colors34">Category</p>
+                <ul class="flex flex-col items-center gap-5">
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors63">Living Room</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors64">Bed Room</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Kitchen" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors65">Kitchen</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors66">Bath Room</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex w-[25%] flex-col items-start gap-[18px] sm:w-full">
+                <p class="text ui text-lg font-semibold !text-colors35">Our company</p>
+                <ul class="flex flex-col items-start gap-5">
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors67">About us</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Vacancies" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors68">Vacancies</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors69">Contact us</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Privacy" target="_blank" rel="noreferrer">
+                      <p class="text ui text-base font-normal !text-colors70">Privacy</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="text ui text-base font-normal !text-colors71">Returns policy</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex w-[21%] flex-col items-start gap-4 self-start md:w-full md:self-auto">
+              <p class="text ui text-lg font-semibold !text-colors20">Stay Updated</p>
+              <label
+                class="flex h-[36px] items-center justify-center gap-1 self-stretch rounded-[18px] pl-3 pr-[35px] text-xs text-colors21 sm:pr-5"
+              >
+                <img src="public/images/img_sms.svg" alt="Sms" class="h-[20px] w-[20px]" />
+                <input name="date" placeholder="Enter your mail" type="text" />
+              </label>
+              <button
+                class="flex h-[30px] min-w-[91px] flex-row items-center justify-center rounded-[15px] px-4 text-center text-xs font-medium text-colors22"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="container-xs h-px md:p-5"></div>
+          <div class="container-xs flex justify-center md:p-5">
+            <p class="text ui text-xs font-normal !text-colors12">© 2023 by Urban craft all rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
