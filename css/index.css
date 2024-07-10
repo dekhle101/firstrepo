@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  background-color: transparent;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  margin-inline: unset !important;
+  padding: 0;
+  list-style: none;
+}
+
+#slider4-pagination > .swiper-pagination-bullet {
+  height: 6px;
+  width: 6px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+#slider4-pagination > .swiper-pagination-bullet-active {
+  height: 10px;
+  border-width: 1px;
+  border-style: normal;
+  width: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 4px;
+}

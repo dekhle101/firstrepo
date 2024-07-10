@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DhiWise web app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <img
+      alt="Logo"
+      src="https://appproject.dhiwise.com/dhiwise-logo.png?c=&v="
+      style="width: 0px; height: 0px; display: none"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <script>
+      /**
+       * Handles the tab change functionality in a tablist
+       */
+      function handleTabs(/** @type {HTMLElement} */ target) {
+        const tabs = /** @type {HTMLElement[]} */ (target.querySelectorAll('[role="tab"]'));
+        const tabPanels = /** @type {HTMLElement[]} */ (target.querySelectorAll('[role="tabpanel"]'));
+        const activeClassList = target.dataset.activeClass.split(" ");
+
+        function changeTab(/** @type {HTMLElement}*/ target) {
+          target.focus();
+          const controls = /** @type {string} */ (target.getAttribute("aria-controls"));
+
+          for (const tab of tabs) {
+            const isActiveTab = tab.id === target.id;
+            const tabIndex = isActiveTab ? "0" : "-1";
+            const ariaSelected = isActiveTab ? "true" : "false";
+
+            tab.setAttribute("tabindex", tabIndex);
+            tab.setAttribute("aria-selected", ariaSelected);
+            isActiveTab ? tab.classList.add(...activeClassList) : tab.classList.remove(...activeClassList);
+          }
+
+          for (const panel of tabPanels) {
+            const shouldHidePanel = panel.id !== controls;
+            panel.hidden = shouldHidePanel;
+            panel.style.display = shouldHidePanel ? "none" : "";
+          }
+        }
+
+        function handleClickEvent(/** @type {MouseEvent} */ event) {
+          changeTab(event.target);
+        }
+
+        function handleKeyboardEvent(/** @type {KeyboardEvent} */ event) {
+          const key = event.key;
+          const target = event.target;
+          const index = [...tabs].findIndex((tab) => tab.id === target.id);
+
+          switch (key) {
+            case "ArrowLeft": {
+              const prevTab = tabs[index - 1];
+              if (prevTab) changeTab(prevTab);
+              break;
+            }
+
+            case "ArrowRight": {
+              const nextTab = tabs[index + 1];
+              if (nextTab) changeTab(nextTab);
+              break;
+            }
+
+            case "Home": {
+              const firstTab = tabs[0];
+              if (firstTab) changeTab(firstTab);
+              break;
+            }
+
+            case "End": {
+              const lastTab = tabs[tabs.length - 1];
+              if (lastTab) changeTab(lastTab);
+              break;
+            }
+          }
+        }
+
+        for (const tab of tabs) {
+          tab.style.cursor = "pointer";
+          tab.addEventListener("click", handleClickEvent);
+          tab.addEventListener("keydown", handleKeyboardEvent);
+        }
+      }
+      /**
+       * Hydrate tablist(s)
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabLists = /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll('[role="tablist"]'));
+        for (const tabList of tabLists) handleTabs(tabList);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="w-full">
+      <div
+        class="flex h-[940px] items-center justify-center bg-[url(../public/images/img_group_1.png)] bg-cover bg-no-repeat pb-[125px] pt-[124px] md:h-auto md:py-5"
+      >
+        <div class="container-xs flex justify-center px-[310px] md:p-5 md:px-5">
+          <div class="w-full">
+            <div
+              id="tabList"
+              role="tablist"
+              aria-label="rowemail"
+              class="flex flex-col items-start gap-[30px] rounded-[24px] px-10 pb-[39px] pt-11 md:pt-5 sm:p-5"
+              data-active-class="font-medium border-b border-style-[normal]"
+            >
+              <a href="Login" target="_blank" rel="noreferrer" class="md:text-[44px] sm:text-[38px]">
+                <p class="text ui text-5xl font-medium !text-colors">Login</p>
+              </a>
+              <div class="flex flex-wrap gap-3 pb-1.5 pt-[5px]">
+                <span
+                  class="border-style-[normal] border-b p-[7px] text-base font-medium font-normal text-colors1"
+                  id="tab01"
+                  role="tab"
+                  aria-controls="tabpanel01"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  Email</span
+                >
+                <span
+                  class="p-[7px] text-base font-normal text-colors2"
+                  id="tab11"
+                  role="tab"
+                  aria-controls="tabpanel11"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  Phone</span
+                >
+              </div>
+              <div id="tabpanel01" role="tabpanel" aria-labelledby="tab01" class="tabcontent self-stretch">
+                <div class="flex flex-col items-start gap-8">
+                  <div class="flex flex-col gap-[15px] self-stretch">
+                    <div class="flex flex-col items-center gap-[7px]">
+                      <div class="flex self-start px-4">
+                        <p class="text ui text-sm font-normal !text-colors9">Email*</p>
+                      </div>
+                      <label
+                        class="flex h-[48px] items-center justify-center gap-2 self-stretch rounded-[24px] pl-4 pr-[35px] text-sm text-colors7 sm:pr-5"
+                      >
+                        <img src="public/images/img_sms.svg" alt="Sms" class="h-[24px] w-[24px]" />
+                        <input name="email" placeholder="Enter email" type="text" />
+                      </label>
+                    </div>
+                    <div class="flex flex-col items-end gap-2.5">
+                      <div class="flex flex-col items-center gap-[7px] self-stretch">
+                        <div class="flex self-start px-4">
+                          <p class="text ui text-sm font-normal !text-colors11">Password*</p>
+                        </div>
+                        <label
+                          class="flex h-[48px] items-center justify-center gap-2 self-stretch rounded-[24px] px-3.5 text-sm text-colors10"
+                        >
+                          <img src="public/images/img_lock.svg" alt="Lock" class="h-[24px] w-[24px]" />
+                          <input name="password" placeholder="Enter password" type="text" />
+                          <img src="public/images/img_eyeslash.svg" alt="Eye-slash" class="h-[24px] w-[24px]" />
+                        </label>
+                      </div>
+                      <a href="#" class="mr-4 md:mr-0">
+                        <p class="text ui text-sm font-medium !text-colors8 underline">Forgot password?</p>
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    class="flex h-[48px] w-full flex-row items-center justify-center rounded-[24px] px-[35px] text-center text-sm font-semibold text-colors3 sm:px-5"
+                  >
+                    Login
+                  </button>
+                  <div class="flex items-end gap-8 self-stretch sm:flex-col">
+                    <div class="mb-[7px] h-px flex-1 sm:self-stretch"></div>
+                    <p class="text ui text-base font-normal !text-colors4">Or</p>
+                    <div class="mb-[7px] h-px flex-1 sm:self-stretch"></div>
+                  </div>
+                  <div class="flex gap-4 self-stretch sm:flex-col">
+                    <div class="flex w-full justify-center rounded-[16px] border border-solid p-3 sm:w-full">
+                      <img src="public/images/img_fi_747.svg" alt="Fi747" class="h-[32px] w-[32px]" />
+                    </div>
+                    <div class="flex w-full justify-center rounded-[16px] border border-solid p-3 sm:w-full">
+                      <img src="public/images/img_fi_281764.svg" alt="Fi281764" class="h-[32px] w-[32px]" />
+                    </div>
+                    <div class="flex w-full justify-center rounded-[16px] border border-solid p-3 sm:w-full">
+                      <img src="public/images/img_group.svg" alt="Image" class="h-[32px] w-[32px]" />
+                    </div>
+                  </div>
+                  <div class="flex w-[42%] flex-wrap items-center gap-1 md:w-full">
+                    <p class="text ui self-start text-sm font-normal !text-colors5">New to Furnihouse?</p>
+                    <a href="Register" target="_blank" rel="noreferrer" class="self-end">
+                      <p class="text ui text-sm font-medium !text-colors6 underline">Register</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="display: none"
+                id="tabpanel11"
+                role="tabpanel"
+                aria-labelledby="tab11"
+                class="tabcontent self-stretch"
+              >
+                <span style="min-height: 458px"> Phone content</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
